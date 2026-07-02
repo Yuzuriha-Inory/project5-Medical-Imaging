@@ -1,0 +1,75 @@
+项目复现说明
+
+一、文件放置要求
+
+1. 将项目文件夹MRI_UNET_PROJECT.zip解压到D盘根目录，确保路径为：
+
+D:\MRI_UNET_PROJECT
+
+项目目录下应包含：
+
+D:\MRI_UNET_PROJECT\run.bat
+D:\MRI_UNET_PROJECT\main.py
+D:\MRI_UNET_PROJECT\config.py
+D:\MRI_UNET_PROJECT\models
+D:\MRI_UNET_PROJECT\utils
+等
+
+2. 将med_env.zip （项目所需环境，elearning中提交）解压到D盘根目录，确保路径为：
+
+D:\med_env\python.exe
+
+正确结构应为：
+
+D:\med_env\python.exe
+D:\med_env\Scripts\
+D:\med_env\Lib\
+D:\med_env\Library\
+等
+
+二、数据集要求
+
+请确保脑部MRI数据集已经放置到config.py中DATA_DIR指定的位置。
+
+建议将数据放到：
+
+D:\MRI_UNET_PROJECT\data
+
+如果数据集放在其他位置，可以打开config.py，修改开头的DATA_DIR为实际路径。
+
+
+三、运行方式
+
+双击运行：
+
+D:\MRI_UNET_PROJECT\run.bat
+
+脚本会自动调用：
+
+D:\med_env\python.exe
+
+并执行：
+
+python main.py
+
+训练过程会实时显示在窗口中
+
+
+四、运行前检查
+
+如果想先检查环境是否可用，可以打开D:\MRI_UNET_PROJECT文件夹，在终端中执行：
+
+D:\med_env\python.exe -c "import torch, torchvision, numpy, pandas, matplotlib, sklearn, PIL, tqdm, skimage, scipy, SimpleITK; print('环境检查通过'); print(torch.__version__, torchvision.__version__)"
+
+如果输出“环境检查通过”，说明环境可用。
+
+
+五、可能的注意事项
+
+1. 复现应该适用于Windows 64位系统；
+2. run.bat默认解释器路径为D:\med_env\python.exe；
+3. 如果环境不在D:\med_env，需要修改run.bat中的 PYTHON_EXE 路径；
+4. 如果数据集路径不同，需要修改 config.py 中的 DATA_DIR；
+5. 如果只是测试能否运行，可以先在 config.py 中将 EPOCHS 改为 1；
+6. 没有NVIDIA显卡也可以运行，但训练速度会明显变慢；
+7. 输出结果保存位置由 config.py 中 OUTPUT_DIR 决定。
