@@ -1,4 +1,4 @@
-项目复现说明
+项目复现说明（随机种子固定为seed=42）
 
 一、文件放置要求
 
@@ -15,7 +15,7 @@ D:\MRI_UNET_PROJECT\models
 D:\MRI_UNET_PROJECT\utils
 等
 
-2. 将med_env.zip （项目所需环境，elearning中提交）解压到D盘根目录，确保路径为：
+2. 将med_env.zip （项目所需环境，zip压缩包存于网盘中，网盘链接     https://pan.baidu.com/s/1IPDU3mh1_1vLrVHvAuvrAw?pwd=6666 提取码: 6666       ）解压到D盘根目录，确保路径为：
 
 D:\med_env\python.exe
 
